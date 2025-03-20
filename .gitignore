@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+*.env
+*.venv
+
+# Django secret settings
+.env.local
+.env.development
+.env.production
+settings.pyc
+
+# Django database, migrations, cache, and media files
+db.sqlite3
+*.sqlite3
+media/
+migrations/**/__pycache__/
+staticfiles/
+*.log
+*.bak
+
+# Node.js & Expo
+node_modules/
+.expo/
+.expo-shared/
+npm-debug.log*
+yarn.lock
+package-lock.json
+
+# macOS / Windows system files
+.DS_Store
+Thumbs.db
