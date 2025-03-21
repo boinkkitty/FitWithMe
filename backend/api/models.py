@@ -20,7 +20,7 @@ class TemplateWorkout(models.Model):
     def __str__(self):
         return self.name
 
-class TemplateExercises(models.Model):
+class TemplateExercise(models.Model):
     template = models.ForeignKey(TemplateWorkout, on_delete=models.CASCADE, related_name="exercises") # Template ID
     name = models.CharField(max_length=100) # Name of exercise
     sets = models.IntegerField(default=3, validators=[MinValueValidator(1)]) #Usual number of sets
@@ -36,7 +36,7 @@ class Workout(models.Model):
     def __str__(self):
         return {self.name}
 
-class Exercises(models.Model):
+class Exercise(models.Model):
     workout = models.ForeignKey(Workout, on_delete=models.CASCADE, related_name="exercises")
     name = models.CharField(max_length=100) # Name of exercise
     weights = models.FloatField() # Weight in kg
